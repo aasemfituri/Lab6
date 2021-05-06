@@ -1,1 +1,1 @@
-# Lab6_Solution
+https://aasemfituri.github.io/Lab6/
