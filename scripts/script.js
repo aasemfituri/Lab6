@@ -16,18 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
    * the current entry for each journal-entry element.
    */
 
-  let url = ""  // SET URL 
+  let url = "https://cse110lab6.herokuapp.com/entries"  // SET URL 
 
-  fetch(url)
-    .then( /* FILL IN RESPONSE HANDLING HERE */ )
+fetch(url)
+    .then(response => response.json() )
     .then(entries => {
       entries.forEach((entry) => {
        
-        let newPost;  
 
+        let newPost = document.createElement('journal-entry');  
+        console.log(newPost);
 
-        // CODE GOES HERE vvv
-        
+        // CODE GOES HERE vvv  
+        newPost.entry = entry;
+        document.querySelector('main').appendChild(newPost);
+
 
 
 
